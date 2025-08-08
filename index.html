@@ -411,26 +411,33 @@
     document.getElementById('hostBtn').onclick = ()=>{ document.getElementById('hostForm').style.display='block'; document.getElementById('joinForm').style.display='none'; };
     document.getElementById('joinBtn').onclick = ()=>{ document.getElementById('hostForm').style.display='none'; document.getElementById('joinForm').style.display='block'; };
     document.getElementById('createCampaign').onclick = async ()=>{
-      SUPABASE_URL = document.getElementById('sbUrl').value.trim();
-      SUPABASE_ANON_KEY = document.getElementById('sbKey').value.trim();
+      // Use hardcoded keys if present; fall back to inputs
+      SUPABASE_URL = SUPABASE_URL || (document.getElementById('sbUrl')?.value.trim() || '');
+      SUPABASE_ANON_KEY = SUPABASE_ANON_KEY || (document.getElementById('sbKey')?.value.trim() || '');
       if(!SUPABASE_URL||!SUPABASE_ANON_KEY){ msg('Enter Supabase URL and anon key.'); return; }
       try{
-        const id = await hostCampaign(document.getElementById('campaignName').value.trim()||'Korath', document.getElementById('gmPin').value.trim());
+        const name = document.getElementById('campaignName')?.value.trim() || 'Korath';
+        const pin  = document.getElementById('gmPin')?.value.trim() || '';
+        const id = await hostCampaign(name, pin);
         msg('Campaign created. ID: '+id);
         elLanding.style.display='none';
         render();
-      }catch(err){ msg('Error: '+err.message); }
+      }catch(err){ msg('Error: '+(err?.message||err)); }
     };
     document.getElementById('joinCampaign').onclick = async ()=>{
-      SUPABASE_URL = document.getElementById('sbUrl').value.trim();
-      SUPABASE_ANON_KEY = document.getElementById('sbKey').value.trim();
+      SUPABASE_URL = SUPABASE_URL || (document.getElementById('sbUrl')?.value.trim() || '');
+      SUPABASE_ANON_KEY = SUPABASE_ANON_KEY || (document.getElementById('sbKey')?.value.trim() || '');
       if(!SUPABASE_URL||!SUPABASE_ANON_KEY){ msg('Enter Supabase URL and anon key.'); return; }
       try{
-        const info = await joinCampaign(document.getElementById('campaignId').value.trim(), document.getElementById('playerName').value.trim(), document.getElementById('playerCode').value.trim());
+        const cid = document.getElementById('campaignId')?.value.trim();
+        const nm  = document.getElementById('playerName')?.value.trim();
+        const code= document.getElementById('playerCode')?.value.trim();
+        if(!cid||!nm){ msg('Campaign ID and Player Name required.'); return; }
+        const info = await joinCampaign(cid, nm, code);
         msg('Joined. Your player code: '+info.code);
         elLanding.style.display='none';
         render();
-      }catch(err){ msg('Error: '+err.message); }
+      }catch(err){ msg('Error: '+(err?.message||err)); }
     };
 
     // ====== INIT ======
