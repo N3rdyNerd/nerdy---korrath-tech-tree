@@ -1,1 +1,379 @@
 
+[
+  {
+    "id": "p_t1_wepcal",
+    "name": "Ancient Weapon Calibration",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Minor boost to attack rolls with salvaged ancient weapons."
+  },
+  {
+    "id": "p_t1_armormod",
+    "name": "Basic Armor Mods",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Simple plating upgrades; +1 AC vs a specific damage type."
+  },
+  {
+    "id": "p_t1_scanner",
+    "name": "Tech Scanner",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Scan simple relics and terrain hazards."
+  },
+  {
+    "id": "p_t1_repair",
+    "name": "Field Repair Kit",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Repair basic gear in the field; prevent degradation."
+  },
+  {
+    "id": "p_t1_ammo",
+    "name": "Prototype Ammo",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Access a small stock of special ammunition (limited uses)."
+  },
+  {
+    "id": "p_t1_lang",
+    "name": "Language Fragment",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Understand a few phrases of ancient language."
+  },
+  {
+    "id": "p_t1_comms",
+    "name": "Personal Comms Unit",
+    "tier": 1,
+    "cost": 1,
+    "prereqs": [],
+    "discovered": true,
+    "desc": "Private encrypted link with one other party member or NPC."
+  },
+  {
+    "id": "p_t2_energy",
+    "name": "Energy Weapon Handling",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_wepcal"
+    ],
+    "discovered": false,
+    "desc": "Remove disadvantage when using energy weapons."
+  },
+  {
+    "id": "p_t2_hud",
+    "name": "HUD Targeting System",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_scanner"
+    ],
+    "discovered": false,
+    "desc": "+1 ranged attack and better rangefinding."
+  },
+  {
+    "id": "p_t2_jet",
+    "name": "Short-Burst Jetpack",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_armormod"
+    ],
+    "discovered": false,
+    "desc": "Limited vertical mobility for combat/exploration."
+  },
+  {
+    "id": "p_t2_drone1",
+    "name": "Combat Drone (Mk.I)",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_scanner"
+    ],
+    "discovered": false,
+    "desc": "Basic drone for scouting or distraction."
+  },
+  {
+    "id": "p_t2_juryrig",
+    "name": "Jury-Rig Mods",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_repair"
+    ],
+    "discovered": false,
+    "desc": "Craft simple mods without a workshop."
+  },
+  {
+    "id": "p_t2_datajack",
+    "name": "Data Jack Interface",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_lang"
+    ],
+    "discovered": false,
+    "desc": "Direct plug-in to ancient terminals."
+  },
+  {
+    "id": "p_t2_biofilter",
+    "name": "Bio-Filter Implant",
+    "tier": 2,
+    "cost": 2,
+    "prereqs": [
+      "p_t1_repair"
+    ],
+    "discovered": false,
+    "desc": "Resistance to common toxins and diseases."
+  },
+  {
+    "id": "p_t3_heavy",
+    "name": "Heavy Weapon Certification",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_energy"
+    ],
+    "discovered": false,
+    "desc": "Proficiency with large, high-damage ancient weapons."
+  },
+  {
+    "id": "p_t3_camo",
+    "name": "Adaptive Camouflage",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_hud"
+    ],
+    "discovered": false,
+    "desc": "Partial invisibility in low light or cover."
+  },
+  {
+    "id": "p_t3_drone2",
+    "name": "Combat Drone (Mk.II)",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_drone1"
+    ],
+    "discovered": false,
+    "desc": "Upgraded drone with basic attack capability."
+  },
+  {
+    "id": "p_t3_fabricator",
+    "name": "Portable Fabricator",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_juryrig"
+    ],
+    "discovered": false,
+    "desc": "Craft small components or ammo on the move."
+  },
+  {
+    "id": "p_t3_override",
+    "name": "System Override Protocols",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_datajack"
+    ],
+    "discovered": false,
+    "desc": "Force unlock sealed doors or disable defenses."
+  },
+  {
+    "id": "p_t3_gene",
+    "name": "Gene Stabilizer",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_biofilter"
+    ],
+    "discovered": false,
+    "desc": "Boost a Resonant ability or reduce side effects."
+  },
+  {
+    "id": "p_t3_neural",
+    "name": "Neural Link",
+    "tier": 3,
+    "cost": 3,
+    "prereqs": [
+      "p_t2_datajack"
+    ],
+    "discovered": false,
+    "desc": "Control one ancient construct briefly."
+  },
+  {
+    "id": "p_t4_shield",
+    "name": "Personal Energy Shield",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_gene"
+    ],
+    "discovered": false,
+    "desc": "Absorbs a set amount of damage before breaking."
+  },
+  {
+    "id": "p_t4_amp",
+    "name": "Resonance Amplifier",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_gene"
+    ],
+    "discovered": false,
+    "desc": "Boost one Resonant power for a short duration."
+  },
+  {
+    "id": "p_t4_drone3",
+    "name": "Combat Drone (Mk.III)",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_drone2"
+    ],
+    "discovered": false,
+    "desc": "Fully armed drone with independent targeting."
+  },
+  {
+    "id": "p_t4_frame",
+    "name": "Advanced Armor Frame",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_heavy",
+      "p_t3_camo"
+    ],
+    "discovered": false,
+    "desc": "Powered armor with strength/mobility boosts."
+  },
+  {
+    "id": "p_t4_multideck",
+    "name": "Multi-System Control Deck",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_override"
+    ],
+    "discovered": false,
+    "desc": "Remotely control multiple tech devices at once."
+  },
+  {
+    "id": "p_t4_bioaug",
+    "name": "Bio-Augment Package",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_gene"
+    ],
+    "discovered": false,
+    "desc": "Enhanced senses, speed, or minor regeneration."
+  },
+  {
+    "id": "p_t4_construct",
+    "name": "Ancient Construct Bond",
+    "tier": 4,
+    "cost": 4,
+    "prereqs": [
+      "p_t3_neural"
+    ],
+    "discovered": false,
+    "desc": "Permanent allied construct companion."
+  },
+  {
+    "id": "p_t5_proto",
+    "name": "Prototype Weapon Access",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_frame",
+      "p_t4_drone3"
+    ],
+    "discovered": false,
+    "desc": "One-of-a-kind customizable weapon."
+  },
+  {
+    "id": "p_t5_stealth",
+    "name": "Full Stealth Suite",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_bioaug",
+      "p_t3_camo"
+    ],
+    "discovered": false,
+    "desc": "Optical camo, sound suppression, heat masking."
+  },
+  {
+    "id": "p_t5_swarm",
+    "name": "Drone Swarm Deployment",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_drone3",
+      "p_t4_multideck"
+    ],
+    "discovered": false,
+    "desc": "Multiple drones acting in concert."
+  },
+  {
+    "id": "p_t5_resonant",
+    "name": "Resonant Mastery Implant",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_amp"
+    ],
+    "discovered": false,
+    "desc": "Greatly amplifies all Resonant abilities."
+  },
+  {
+    "id": "p_t5_copilot",
+    "name": "Neural Co-Pilot AI",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_multideck"
+    ],
+    "discovered": false,
+    "desc": "AI assistant for tactics and automation."
+  },
+  {
+    "id": "p_t5_psionic",
+    "name": "Psionic Energy Manipulation",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_amp"
+    ],
+    "discovered": false,
+    "desc": "Channel raw psionic energy offense/defense."
+  },
+  {
+    "id": "p_t5_mech",
+    "name": "Ancient Mech Pilot Rig",
+    "tier": 5,
+    "cost": 5,
+    "prereqs": [
+      "p_t4_frame",
+      "p_t4_multideck"
+    ],
+    "discovered": false,
+    "desc": "Personal mech unit for short deployments."
+  }
+]
